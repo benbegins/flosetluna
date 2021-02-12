@@ -1,0 +1,9 @@
+.page-contact{
+    &__intro-block{
+        @media screen and (min-width: $lg){
+            @apply absolute bottom-0 left-0 bg-white;
+            height: 80px;
+            width: 50%;
+        }
+    }
+}

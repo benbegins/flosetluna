@@ -1,0 +1,20 @@
+.form{
+    label{
+        @apply text-sm font-bold;
+    }
+    input{
+        @apply w-full p-4 text-lg rounded-lg;
+        border: 1px solid #E2E2E2;
+    }
+    textarea{
+        @apply w-full p-4 text-lg rounded-lg;
+        border: 1px solid #E2E2E2;
+    }
+    #submit button, input[type='submit']{
+        @apply w-full p-4 text-lg rounded-lg font-bold bg-greendark text-light text-center;
+        transition: background 0.3s;
+        &:hover{
+            @apply bg-dark;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.site-header{
+    min-height: 75px;
+    transition: background 0.5s;
+
+    &.background{
+        background: white;
+    }
+
+    &__logo{
+        @apply pl-4 py-3;
+
+        @media screen and (min-width: $md){
+            @apply pl-6;
+        }
+
+        @media screen and (min-width: $xl){
+            @apply pl-8;
+        }
+
+        svg{
+            width: 170px;
+            max-width: 50vw;
+            @media screen and (min-width: $md){
+                width: 200px;
+            }
+            @media screen and (min-width: $lg){
+                width: 220px;
+            }
+        }
+    }
+
+    &__burger{
+        .line{
+            width: 18px;
+            height: 2px;
+            background: $light;
+            margin: 2px 0;
+            transform-origin: center center;
+            transition: transform 0.3s ease;
+        }
+        &.active{
+            .line-1{
+                transform: rotate(45deg) translate(4px, 4px);
+            }
+            .line-3{
+                transform: rotate(-45deg) translate(5px, -4px);
+            }
+            .line-2{
+                transform: scaleX(0);
+            }
+        }
+    }
+
+    &__menu-mobile{
+        transition: transform 0.75s cubic-bezier(0.3,0,0,1);
+        transform: translateY(-100%);
+        &.active{
+            transform: translateY(0);
+        }
+
+        .menu-mobile__list{
+            a{
+                display: block;
+                padding: 3vh 0;
+            }
+        }    
+    }
+
+    &__menu{
+        .menu-principal{
+            a{
+                @apply block px-6 py-2 hover:text-green;
+            }
+        }
+    }
+
+    svg path, svg ellipse {
+        transition: 0.2s;
+    }
+
+    a:hover{
+        path, ellipse{
+            fill: $green;
+        }
+    }
+    
+}

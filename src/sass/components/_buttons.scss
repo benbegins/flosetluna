@@ -1,0 +1,54 @@
+.btn-primary{
+    @apply text-sm uppercase font-bold inline-block border border-greendark border-opacity-25 rounded-full py-3 px-6 relative;
+    transition:background 0.25s;
+
+    @media screen and (min-width: $lg){
+        @apply py-0 px-10;
+        line-height: 58px;
+    }
+
+    &::before{
+        content: "";
+        @apply absolute border border-greendark rounded-full;
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        top: -6px;
+        left: -6px;
+    }
+
+    &:hover{
+        @apply bg-greendark bg-opacity-25 border-opacity-0;
+    }
+}
+
+.btn-secondary{
+    @apply font-serif font-bold text-lg relative inline-block;
+    padding-left: 50px;
+
+    @media screen and (min-width: $lg){
+        padding-left: 70px;
+        transition: padding 0.4s $ease;
+    }
+
+    &::before{
+        content: "";
+        width: 40px;
+        height: 1px;
+        @apply absolute bg-greendark left-0 top-1/2;
+        transition: width 0.4s $ease;
+
+        @media screen and (min-width: $lg){
+            width: 60px;
+        }
+    }
+
+    &:hover{
+        @media screen and (min-width: $lg){
+            padding-left: 80px;
+
+            &::before{
+                width: 70px;
+            }
+        }
+    }
+}

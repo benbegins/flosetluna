@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icons" transform="translate(-1.984 -2)">
+    <g id="user" transform="translate(1.984 2)">
+      <ellipse id="Ellipse_13" data-name="Ellipse 13" cx="5" cy="6" rx="5" ry="6" transform="translate(5)" fill="#f5f1ed"/>
+      <path id="Tracé_117" data-name="Tracé 117" d="M21.769,19.1a9.1,9.1,0,0,0-4.792-4.2,2.232,2.232,0,0,0-1.8.1,6.121,6.121,0,0,1-6.39,0,2.243,2.243,0,0,0-1.8,0A9.1,9.1,0,0,0,2.2,19.2,1.973,1.973,0,0,0,4.1,22H19.872A2.025,2.025,0,0,0,21.769,19.1Z" transform="translate(-1.984 -2)" fill="#f5f1ed"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+.footer__instagram{
+    position: relative;
+
+    &::before{
+        content: "";
+        @apply absolute bg-dark inset-x-0 h-1/2 bottom-0;
+    }
+
+    .sbi_photo_wrap{
+        background: $dark;
+    }
+
+}
+
+.site-footer{
+    a:hover{
+        color: $green;
+    }
+    &__menu{
+        a{
+            @apply inline-block py-1;
+
+            @media screen and (min-width: $lg){
+                @apply py-2;
+            }
+        }
+    }
+
+    .newsletter-form-content{
+        display: flex;
+        input{
+            color: rgba(255,255,255,0.5);
+            background: #2F3933;
+            padding: 15px 25px;
+            width: 100%;
+            line-height: 2;
+        }
+        input[type="submit"]{
+            background: $light;
+            color: $dark;
+            font-weight: $weight-bold;
+            font-family: 'Playfair Display', sans-serif;
+            cursor:pointer;
+            transition: background 0.3s;
+
+            &:hover{
+                background: $green;
+            }
+        }
+        .email-container{
+            width: 65%;
+            input{
+                border-radius:8px 0 0 8px;
+            }
+        }
+        .submit-container{
+            width: 35%;
+            input{
+                border-radius:0 8px 8px 0;
+            }
+        }
+    }
+
+    &__logo{
+        width: 170px;
+        @media screen and (min-width: $lg){
+            width: 220px;
+        }
+    }
+}

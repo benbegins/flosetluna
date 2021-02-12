@@ -1,0 +1,23 @@
+.home-intro{
+    position: relative;
+
+    &__container{
+        padding-left: 1.5rem;
+
+        @media screen and (min-width: $md){
+            padding-left: 2rem;
+        }
+        @media screen and (min-width: $lg){
+            padding-left: 3rem;
+        }
+        @media screen and (min-width: $xl){
+            padding-left: calc((100% - 10vw) / 12 + 5vw);
+        }
+    }
+
+    &::before{
+        content: "";
+        z-index: -1;
+        @apply absolute w-full h-1/6 bg-light top-0 left-0;
+    }
+}

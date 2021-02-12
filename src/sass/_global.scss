@@ -1,0 +1,118 @@
+::selection{
+	background: $greendark;
+	color: $light;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.75;
+    color: $greendark;
+    @apply text-base;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+a{
+    transition: color 0.2s;
+}
+
+
+// Page transition
+.page-intro{
+    @apply fixed inset-0 bg-light z-50 flex items-center justify-center;
+    transition: opacity 0.25s linear;
+
+    &.fade-out{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+// Sections padding
+.section-pad{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media screen and (min-width: $md){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+    @media screen and (min-width: $xl){
+        padding-top: 9vw;
+        padding-bottom: 9vw;
+    }
+}
+.section-pad-top{
+    padding-top: 80px;
+    @media screen and (min-width: $md){
+        padding-top: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-top: 110px;
+    }
+    @media screen and (min-width: $xl){
+        padding-top: 9vw;
+    }
+}
+.section-pad-bottom{
+    padding-bottom: 80px;
+    @media screen and (min-width: $md){
+        padding-bottom: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-bottom: 110px;
+    }
+    @media screen and (min-width: $xl){
+        padding-bottom: 9vw;
+    }
+}
+.pad-page-top{
+    padding-top: 90px;
+}
+.container{
+    max-width: none;
+}
+
+
+// Word Slide
+.word-slide{
+    @apply absolute font-serif;
+    font-size: calc(4rem + 17vw);
+    opacity: 0.03;
+    line-height: 1;
+    pointer-events:none;
+    white-space:nowrap;
+
+    &.from-right{
+        left: 40%;
+    }
+    &.from-left{
+        right: 40%;
+    }
+}
+
+
+// Zone texte
+.zone-texte{
+    a{
+        text-decoration: underline;
+        &:hover{
+            color: $green;
+        }
+    }
+}

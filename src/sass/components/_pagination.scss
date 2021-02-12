@@ -1,0 +1,22 @@
+.pagination{
+    @apply flex justify-center;
+
+    &__list{
+        @apply text-center flex justify-center;
+    }
+
+    .page-numbers{
+        @apply inline-block border border-greendark px-4 py-3 leading-none font-bold mx-1 transition duration-200;
+
+        &.current{
+            @apply bg-greendark text-light;
+            &:hover{
+                @apply bg-greendark text-light;
+            }
+        }
+
+        &:hover{
+            @apply bg-greendark text-light;
+        }
+    }
+}

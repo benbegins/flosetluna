@@ -1,0 +1,45 @@
+.intro-boutique{
+    &__block{
+        @apply absolute bg-light ml-12 inset-x-0 top-0 h-1/6;
+        @media screen and (min-width: $lg){
+            @apply ml-auto;
+            width: calc(100vw - (((100% - 10vw) / 12 * 3) + 3rem));
+        }
+        @media screen and (min-width: $xl){
+            width: calc(100vw - (((100% - 10vw) / 12 * 3) + 5vw));
+        }
+    }
+}
+
+.archive-product{
+    &__cat{
+        &.is-fixed{
+            position: fixed;
+            width: 100%;
+            left: 0;
+            z-index: 30;
+            background: white;
+        }    
+    }
+    &__cat__link{
+        position: relative;
+        &::after{
+            content: "";
+            @apply absolute w-full h-0.5 bg-greendark bottom-0 left-0;
+            transform: scaleX(0);
+            transition: transform 0.3s $ease;
+        }
+        &.active{
+            @apply font-bold;
+            &::after{
+                transform: scaleX(1);
+            }
+            &:hover{
+                color: $greendark;
+            }
+        }
+    }
+    &__list{
+        transition: opacity 0.25s linear;
+    }
+}

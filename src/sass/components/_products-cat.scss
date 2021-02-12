@@ -1,0 +1,118 @@
+.products-cat{
+    &__image{
+        padding-bottom: 130%;
+        transition: transform 0.5s $ease;
+        @apply bg-cover bg-no-repeat bg-center relative;
+
+        &::before{
+            content:"";
+            @apply absolute w-full h-1/2 bottom-0 left-0;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        &::after{
+            content:"";
+            @apply absolute inset-0 bg-greendark;
+            transition: opacity 0.5s $ease;
+            opacity: 0.15;
+        }
+    }
+
+    &__image-container{
+        overflow: hidden;
+    }
+
+    &__item{
+        @apply relative;
+        box-shadow: 0 10px 50px rgba(0,0,0,0.15);
+
+        &:hover{
+            .products-cat__image{
+                transform: scale(1.05);
+
+                &::after{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__text-container{
+        @apply absolute inset-x-0 flex items-center;
+        bottom: 5%;
+        padding: 0 10%;
+    }
+
+    &__line{
+        flex: auto;
+        height: 1px;
+        width: auto;
+        margin-top: 4px;
+        @apply bg-light;
+    }
+
+    &__title{
+        @apply font-serif font-bold text-lg pl-3;
+    }
+
+    .pagination-container{
+        @apply hidden lg:flex absolute justify-end right-0 bottom-0;
+        height: 71px;
+        padding-right: 3rem;
+    }
+
+    .pagination-slider{
+        width: 71px;
+        height: 71px;
+        background: url('./dist/img/arrow-slider.svg') center center no-repeat;
+        background-size: 71px 71px;
+        cursor: pointer;
+        border-radius: 100%;
+        transition: background 0.2s;
+        outline: 0;
+
+        &:hover{
+            background-color: rgba(255,255,255,0.15);
+        }
+    }
+
+    .pagination-left{
+        transform: rotate(180deg);
+    }
+
+    .pagination-disabled{
+        opacity: 0.25;
+    }
+
+    .swiper-container{
+        padding: 40px 1.5rem 0;
+        @media screen and (min-width: $md){
+            padding: 30px 2rem;
+        }
+        @media screen and (min-width: $lg){
+            padding: 30px 3rem;
+        }
+        @media screen and (min-width: $xl){
+            padding: 30px 5vw;
+        }
+    }
+
+    .swiper-slide{
+        width: 70%;
+
+        @media screen and (min-width: $md){
+            width: 40%;
+        }
+        @media screen and (min-width: $lg){
+            width: 27%;
+        }
+    }
+
+    .swiper-scrollbar{
+        background: rgba(247,245,242, 0.25);
+    }
+    .swiper-scrollbar-drag{
+        background: $light;
+        cursor: col-resize;
+    }
+}

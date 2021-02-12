@@ -1,0 +1,94 @@
+.produits-list{
+    &__item{
+        @apply relative flex justify-start items-center flex-col py-6;  
+    }
+
+    &__item:nth-child(2n){
+        @media screen and (min-width: $md){
+            margin-top: 8vh;
+        }
+        @media screen and (min-width: $lg){
+            margin-top: 4vh;
+        }
+    }
+    &__item:nth-child(4n + 2){
+        @media screen and (min-width: $lg){
+            margin-top: 6vh;
+        }
+    }
+    &__item:nth-child(4n + 1){
+        @media screen and (min-width: $lg){
+            margin-top: 2vh;
+        }
+    }
+
+    &__image-container{
+        @apply relative overflow-hidden w-full;
+
+        &:hover{
+            .produits-list__image{
+                transform:scale(1.05);
+            }
+        }
+    }
+
+    &__category{
+        @apply inline-block uppercase text-sm tracking-wider relative px-2 text-green hover:text-greendark;
+        margin-top:-20px;
+
+        @media screen and (min-width: $lg){
+            margin-top:-24px;
+        }
+    }
+
+    &__text-container{
+        @apply text-center mt-9;
+
+        @media screen and (min-width: $lg){
+            @apply mt-12;
+        }
+    }
+
+    &__image{
+        @apply bg-center bg-no-repeat bg-cover;
+        padding-bottom: 100%;
+        transition: transform 0.5s $ease;
+
+        @media screen and (min-width: $lg){
+            padding-bottom: 125%;
+        }
+    }
+
+    &__list{
+        &.bg-white{
+            .produits-list__category{
+                background: white;
+            }
+        }
+        &.bg-light{
+            .produits-list__category{
+                background: $light;
+            }
+        }
+    }
+
+
+    //Out of stock
+    &__item-out{
+        .produits-list__image{
+            position: relative;
+            &::after{
+                content: "";
+                background: rgba(255,255,255,0.6);
+                z-index: 1;
+                @apply absolute inset-0;
+            }
+            &::before{
+                content: "Indisponible pour le moment";
+                top: 50%;
+                z-index: 2;
+                @apply absolute text-center inset-x-0 text-dark font-bold uppercase text-sm opacity-75;
+            }
+        }
+    }
+}

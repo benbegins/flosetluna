@@ -1,0 +1,97 @@
+// Boutons
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce input.button.alt{
+    @apply bg-greendark rounded-xl;
+
+    &:hover{
+        @apply bg-dark;
+    }
+}
+
+// Ajouter au panier
+.woocommerce button.button.alt{
+    @apply bg-transparent text-greendark;
+    border: 1px solid rgba(56,82,79,0.25);
+
+    &:hover{
+        @apply bg-greendark bg-opacity-25 text-greendark;
+        border: 1px solid rgba(56,82,79,0);
+    }
+}
+
+
+// Panier & Commande
+.woocommerce__container {
+   form{
+        input[type="text"], input[type="email"], input[type="tel"], input[type="password"]{
+            @apply rounded-xl p-4 border border-greendark border-opacity-25;
+            width: auto;
+        }
+        textarea{
+            @apply rounded-2xl p-4 border border-greendark border-opacity-25;
+            width: auto;
+            min-height:250px;
+        }
+    } 
+    h3, h2{
+        margin: 60px 0 30px;
+        @apply text-xl;
+    }
+    .woocommerce-Address-title {
+        margin-top: 60px;
+
+        h3{
+            margin-top: 0;
+        }
+    }
+    a:hover{
+        color: $green;
+    }
+    mark{
+        background-color: $greenlight;
+    }
+    .quantity .qty{
+        background: $light;
+    }
+}
+
+// Notices
+.woocommerce-info{
+    border-top-color: $greendark;
+    &::before{
+        color:$greendark;
+    }
+}
+.woocommerce-message{
+    border-top-color: $green;
+    &::before{
+        color:$green;
+    }
+}
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+    @apply bg-light rounded-xl border-0;
+
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text{
+    width: auto;
+}
+
+
+// COMPTE
+.woocommerce-MyAccount-navigation-link{
+    padding: 15px 10px;
+    @apply border-b border-greendark border-opacity-25;
+
+    @media screen and (min-width: $lg){
+        margin-right: 5vw;
+    }
+
+    &.is-active{
+        @apply font-bold bg-light;
+    }
+}
+
+// Commande validée
+.woocommerce-thankyou-order-received{
+    @apply text-xl mb-12 font-serif font-bold;
+}
