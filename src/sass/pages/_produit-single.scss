@@ -7,7 +7,10 @@
             display: flex;
 
             li{
-                @apply mt-4 ml-4; 
+                @apply mt-4 ml-4;
+                img{
+                    cursor: pointer;
+                }
             }
         }
 
