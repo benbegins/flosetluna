@@ -8,8 +8,8 @@ get_header();
 
         <section class="section-pad-top bg-light">
             <div class="container pad-page-top pb-24">
-                <div class="lg:w-1/2 lg:mx-auto lg:grid lg:grid-cols-6">
-                    <?php the_title( '<h1 class="text-4xl lg:col-span-6 fade-in" data-delay="0">', '</h1>', true ); ?>
+                <div class="lg:w-1/2 lg:mx-auto">
+                    <?php the_title( '<h1 class="text-4xl fade-in" data-delay="0">', '</h1>', true ); ?>
                 </div>
             </div>
         </section>

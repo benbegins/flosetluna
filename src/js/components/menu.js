@@ -3,13 +3,14 @@ import { gsap } from "gsap";
 const menu = () => {
     const body = document.querySelector('body');
     const header = document.querySelector('.site-header');
-    const burger = document.querySelector('.site-header__burger');
-    const menuMobile = document.querySelector('.site-header__menu-mobile');
-    const menuItems = document.querySelectorAll('.menu-mobile__list li');
-    const menuSocial = document.querySelectorAll('.menu-mobile__social li');
+    const burger = header.querySelector('.site-header__burger');
+    const menuMobile = header.querySelector('.site-header__menu-mobile');
+    const menuItems = header.querySelectorAll('.menu-mobile__list li');
+    const menuSocial = header.querySelectorAll('.menu-mobile__social li');
+    const searchBar = header.querySelector('.site-header__search input[type="text"]');
 
+    // Menu mobile
     burger.addEventListener('click', function () {
-
         menuMobile.classList.toggle('active');
         burger.classList.toggle('active');
 
@@ -27,19 +28,24 @@ const menu = () => {
                     opacity: 0,
                     y: -50,
                     stagger: 0.1,
+                }, "-=0.75")
+                .from('.site-header__search', {
+                    opacity: 0,
                 }, "-=0.75");
         } else {
             body.style.overflow = "inherit";
         }
     });
 
+    // Background on scroll
     window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             header.classList.add('background');
         } else {
             header.classList.remove('background');
         }
-    })
+    });
+
 }
 
 export default menu;

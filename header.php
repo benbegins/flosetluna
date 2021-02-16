@@ -46,7 +46,7 @@
                     </g>
                 </svg>
             </a>
-            <div class="uppercase text-xs pl-10 ml-10 border-l py-2 hidden md:block">Bien-être et magie responsable</div>
+            <div class="uppercase text-xs pl-10 ml-10 border-l py-2 hidden md:block xl:hidden xxl:block">Bien-être et magie responsable</div>
         </div>
 
         <!-- Navigation bar right -->
@@ -66,6 +66,10 @@
 
 
             <!-- Nav desktop -->
+            <div class="site-header__search mr-6 hidden xl:block">
+                <?php echo get_search_form(); ?>
+            </div>
+            
             <div class="site-header__menu hidden xl:block">
                 <?php 
                 wp_nav_menu(array(
@@ -120,10 +124,13 @@
             <div class="min-h-full flex flex-col items-center justify-center uppercase font-bold text-center text-base tracking-wider">
                 <?php 
                 wp_nav_menu(array(
-                'theme_location' =>  'menu-mobile',
-                'menu_class' => 'menu-mobile__list'
-                )); 
+                    'theme_location' =>  'menu-mobile',
+                    'menu_class' => 'menu-mobile__list'
+                ));
                 ?>
+                <div class="site-header__search search-mobile">
+                    <?php echo get_search_form(); ?>
+                </div>
             </div>
             <div class="menu-mobile__social absolute inset-x-0 bottom-0">
                 <ul class="flex justify-around w-full py-8 px-4">

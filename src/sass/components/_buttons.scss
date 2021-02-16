@@ -1,5 +1,5 @@
 .btn-primary{
-    @apply text-sm uppercase font-bold inline-block border border-greendark border-opacity-25 rounded-full py-3 px-6 relative;
+    @apply text-sm uppercase font-bold inline-block border border-greendark border-opacity-25 rounded-full py-4 px-6 relative;
     transition:background 0.25s;
 
     @media screen and (min-width: $lg){

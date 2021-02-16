@@ -96,8 +96,6 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
         $cateID = get_queried_object()->term_id;
         $args = array(
             'post_type'              => array( 'product' ),
-            'posts_per_page'         => 100,
-            'paged'          => $paged,
             'tax_query'      		=> array(
                 array(
                     'taxonomy' => 'product_cat',
@@ -105,12 +103,12 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
                     'terms'    => $cateID,
                 ),
             ),
+            'posts_per_page'         => -1
         );
     } else {
         $args = array(
             'post_type'              => array( 'product' ),
-            'posts_per_page'         => 100,
-            'paged'          => $paged,
+            'posts_per_page'         => -1
         );
     }
 
@@ -133,25 +131,6 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
                 endwhile;
             ?>                  
             </div>
-
-            <!-- PAGINATION -->
-            <?php if($query->found_posts > 100): ?>
-            <div class="pagination section-pad-top">
-                <div class="pagination__list">
-                <?php
-                    $big = 999999999;
-                    echo paginate_links( array(
-                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                        'format' => '?paged=%#%',
-                        'current' => max( 1, get_query_var('paged') ),
-                        'total' => $query->max_num_pages,
-                        'show_all' => true,
-                        'prev_next' => false
-                    ) );
-                ?>        
-                </div>
-            </div>
-            <?php endif; ?>
 
         </div>
 
