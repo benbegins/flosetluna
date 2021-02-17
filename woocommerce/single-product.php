@@ -76,8 +76,14 @@ get_header(); ?>
 							<p class="leading-tight"><?php the_field('composition'); ?></p>
 						</div>
 						<?php endif; ?>
+						
+						<?php 
+							$contre_indication = get_field('contre-indications');
+							if($contre_indication):
+						?>
+						<p class="text-base mb-12 pl-6 border-l italic"><?php echo $contre_indication; ?></p>
+						<?php endif; ?>
 
-						<p><?php the_field('contre-indications'); ?></p>
 						<p class="text-lg"><?php the_field('description'); ?></p>
 					</div>
 				</div>
