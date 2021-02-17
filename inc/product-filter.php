@@ -20,6 +20,8 @@ function filter_products(){
                     'terms'    => $category,
                 ),
             ),
+            'meta_key'              => '_stock',
+            'orderby'               => 'meta_value',
         );    
     } else {
         $args = array(

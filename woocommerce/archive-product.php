@@ -103,12 +103,14 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
                     'terms'    => $cateID,
                 ),
             ),
-            'posts_per_page'         => -1
+            'posts_per_page'         => -1,
+            'meta_key'              => '_stock',
+            'orderby'               => 'meta_value',
         );
     } else {
         $args = array(
             'post_type'              => array( 'product' ),
-            'posts_per_page'         => -1
+            'posts_per_page'         => -1,
         );
     }
 
