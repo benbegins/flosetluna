@@ -141,29 +141,3 @@
         }
     }
 }
-
-// Feuilleteur
-.feuilleteur{
-
-    @apply fixed inset-0 items-center justify-center z-50 hidden;
-    transition: background 0.5s; 
-    // background: rgba(0,0,0,0.85);
-
-    &__doc{
-        width: 90vw;
-        height: 80vh; 
-    }
-
-    &__close{
-        @apply absolute text-light uppercase font-bold;
-        bottom: calc(5vh - 10px);
-        line-height:1;
-    }
-
-
-    &.open{
-        display: flex;
-        background: rgba(0,0,0,0.85);
-    }
-
-}
