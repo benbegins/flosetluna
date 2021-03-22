@@ -65,7 +65,7 @@ get_header(); ?>
 						 */
 						do_action( 'woocommerce_single_product_summary' );						
 						?>
-						<p class="italic opacity-50 mb-12 lg:mb-16">Frais de port offert à partir de 50€</p>
+						<p class="italic opacity-50 mb-12 lg:mb-16">Frais de port offerts à partir de 50€</p>
 
 						<?php 
 							$composition = get_field('composition');
@@ -84,7 +84,7 @@ get_header(); ?>
 						<p class="text-base mb-12 pl-6 border-l italic"><?php echo $contre_indication; ?></p>
 						<?php endif; ?>
 
-						<p class="text-lg"><?php the_field('description'); ?></p>
+						<div class="produit-single__content__description text-lg"><?php the_field('description'); ?></div>
 					</div>
 				</div>
 
