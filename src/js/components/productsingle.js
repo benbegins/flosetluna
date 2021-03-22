@@ -14,6 +14,20 @@ const productSingle = () => {
             outOfStock.innerText = 'Produit de retour bientôt';
         }
 
+        // Feuilleteur
+        const feuilleteur = document.querySelector('.feuilleteur');
+        if (feuilleteur) {
+            const btnOpen = document.querySelector('.feuilleteur__open');
+            const btnClose = document.querySelector('.feuilleteur__close');
+
+            btnOpen.addEventListener('click', () => {
+                feuilleteur.classList.add('open');
+            })
+
+            btnClose.addEventListener('click', () => {
+                feuilleteur.classList.remove('open');
+            })
+        }
     }
 }
 

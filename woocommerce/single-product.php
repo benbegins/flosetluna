@@ -85,12 +85,26 @@ get_header(); ?>
 						<?php endif; ?>
 
 						<div class="produit-single__content__description text-lg"><?php the_field('description'); ?></div>
+						
+						<?php 
+							$feuilleteur = get_field('feuilleteur'); 
+							if($feuilleteur):
+						?>
+						<button class="feuilleteur__open btn-secondary mt-10">Voir un extrait</button>
+						<?php endif; ?>
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</section>
+
+	<?php if($feuilleteur): ?>
+	<div class="feuilleteur">
+			<iframe src="<?php the_field('feuilleteur'); ?>" class="feuilleteur__doc"></iframe>
+			<button class="feuilleteur__close">Fermer</button>
+	</div>
+	<?php endif; ?>
 
 	<!-- Description détaillée -->
 	<section class="bg-light">
