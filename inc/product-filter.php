@@ -22,11 +22,13 @@ function filter_products(){
             ),
             'meta_key'              => '_stock',
             'orderby'               => 'meta_value',
+            'post_status'            => array( 'publish' ),
         );    
     } else {
         $args = array(
             'post_type'              => array( 'product' ),
             'posts_per_page'         => -1,
+            'post_status'            => array( 'publish' ),
         );  
     }
 
