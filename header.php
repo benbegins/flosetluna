@@ -23,7 +23,7 @@
     </div>
 
     <!-- Modal -->
-    <div id="modal" class="z-40 inset-0 fixed bg-dark bg-opacity-90 flex items-center justify-center">
+    <div id="modal" class="inset-0 fixed bg-dark bg-opacity-90 flex items-center justify-center" style="z-index:40">
         <div class="container">
             <div class="bg-light shadow-2xl lg:flex lg:items-center">
                 <div class="bg-dark hidden relative overflow-hidden lg:block lg:w-2/5" style="max-height:80vh">
