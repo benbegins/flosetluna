@@ -1,0 +1,11 @@
+#modal {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 0.5s, opacity 0.5s;
+
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0s linear 0s, opacity 0.5s;
+	}
+}

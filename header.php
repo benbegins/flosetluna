@@ -22,6 +22,23 @@
         </svg>
     </div>
 
+    <!-- Modal -->
+    <div id="modal" class="z-40 inset-0 fixed bg-dark bg-opacity-90 flex items-center justify-center">
+        <div class="container">
+            <div class="bg-light shadow-2xl lg:flex lg:items-center">
+                <div class="bg-dark hidden relative overflow-hidden lg:block lg:w-2/5" style="max-height:80vh">
+                    <img src="<?php echo get_template_directory_uri() ?>/dist/img/img-modal.jpg" alt="Flora & Marine Nina" class="object-cover w-full h-full">
+                </div>
+                <div class="px-8 py-12 lg:w-3/5 lg:px-24">
+                    <p class="text-3xl font-serif font-bold lg:mb-8">Pause estivale</p>
+                    <p class="text-lg font-bold leading-tight my-4">Il vous reste quelques jours pour passer commande avant notre pause estivale.</p>
+                    <p class="leading-snug">L’atelier de Flos & Luna ferme ses portes du <strong>30 juillet au 1er septembre</strong>. Durant le mois d’août les commandes restent ouvertes, mais ne seront envoyées que le 1er septembre.</p>
+                    <button class="close-modal btn-primary mt-8 lg:mt-16">C'est noté !</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="site-header flex items-stretch justify-between text-dark fixed w-full z-30">
 

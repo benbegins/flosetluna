@@ -12,28 +12,28 @@ Version: 1.0
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 //Global
-@import './variables';
-@import './global';
+@import "./variables";
+@import "./global";
 
 // Components
-@import './components/header';
-@import './components/footer';
-@import './components/cursor';
-@import './components/buttons';
-@import './components/products-cat';
-@import './components/swiper-bundle';
-@import './components/liste-produits';
-@import './components/pagination';
-@import './components/woocommerce';
-@import './components/forms';
-@import './components/search';
+@import "./components/header";
+@import "./components/footer";
+@import "./components/cursor";
+@import "./components/buttons";
+@import "./components/products-cat";
+@import "./components/swiper-bundle";
+@import "./components/liste-produits";
+@import "./components/pagination";
+@import "./components/woocommerce";
+@import "./components/forms";
+@import "./components/search";
+@import "./components/modal";
 
 // Pages
-@import './pages/home';
-@import './pages/boutique';
-@import './pages/produit-single';
-@import './pages/a-propos';
-@import './pages/page-texte';
-@import './pages/contact';
+@import "./pages/home";
+@import "./pages/boutique";
+@import "./pages/produit-single";
+@import "./pages/a-propos";
+@import "./pages/page-texte";
+@import "./pages/contact";
