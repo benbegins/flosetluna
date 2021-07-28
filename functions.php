@@ -50,7 +50,7 @@ function flosetluna_register_assets(){
         'flosetluna', 
         get_template_directory_uri() . '/dist/app.js', 
         array(),
-        '1.0',
+        '1.1',
         true
     );
 
