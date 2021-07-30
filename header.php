@@ -31,11 +31,13 @@
                 </div>
                 <div class="px-8 py-12 lg:w-3/5 lg:px-24">
                     <p class="text-3xl font-serif font-bold lg:mb-8">Pause estivale</p>
-                    <p class="text-lg font-bold leading-tight my-4">Il vous reste quelques jours pour passer commande avant notre pause estivale.</p>
-                    <p class="leading-snug">L’atelier de Flos & Luna ferme ses portes du <strong>30 juillet au 1er septembre</strong>. Durant le mois d’août les commandes restent ouvertes, mais ne seront envoyées que le 1er septembre.</p>
+                    <p class="text-lg font-bold leading-tight my-4">L’atelier de Flos & Luna ferme ses portes pendant le mois d’août.</p>
+                    <p class="leading-snug">Les commandes sur le site restent ouvertes, mais seront envoyées le <strong>1er septembre</strong>. 
+                        <br>Bon mois d’août. 
+                        <br><br>Flora & Marine</p>
                     <button class="close-modal btn-primary mt-8 lg:mt-16">C'est noté !</button>
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
 
