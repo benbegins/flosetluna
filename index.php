@@ -9,7 +9,7 @@
 </section>
 
 <!-- Bandeau pause estivale -->
-<?php if(is_cart() || is_checkout()): ?>
+<!-- <?php if(is_cart() || is_checkout()): ?>
     <section class="section-pad-top">
         <div class="container">
             <div class="border p-10">
@@ -18,7 +18,7 @@
             </div>
         </div>
     </section>
-<?php endif; ?> 
+<?php endif; ?>  -->
 
 
 <section class="section-pad">
