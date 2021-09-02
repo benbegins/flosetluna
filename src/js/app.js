@@ -30,7 +30,7 @@ const init = () => {
 	productSingle()
 	//productSlide();
 	productFilter()
-	modal()
+	// modal()
 
 	// Slider Categories
 	var mySwiper = new Swiper(".swiper-container", {
