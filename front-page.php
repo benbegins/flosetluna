@@ -43,7 +43,7 @@
             <div class="lg:grid lg:grid-cols-6">
                 <h2 class="text-3xl lg:col-span-4">Nous croyons au&nbsp;pouvoir de&nbsp;la&nbsp;nature.</h2>
                 <div class="pl-12 lg:pl-0 lg:col-span-4 lg:col-start-2">
-                    <p class="text-lg mt-6 lg:mt-12">Nous croyons à la magie des plantes et à leurs bienfaits. Inspirés par l’herboristerie et de les magies blanche et verte, nos produits sont imaginés pour répondre à vos besoins du quotidien, soigner les petits bobos et vous accompagner dans votre travail de développement personnel et spirituel. </p>
+                    <p class="text-lg mt-6 lg:mt-12">Nous croyons à la magie des plantes et à leurs bienfaits. Inspirés par l’herboristerie et les magies blanche et verte, nos produits sont imaginés pour répondre à vos besoins du quotidien, soigner les petits bobos et vous accompagner dans votre travail de développement personnel et spirituel. </p>
                     <a href="<?php echo get_site_url(); ?>/a-propos" class="btn-secondary mt-6 lg:mt-12">Nous connaître</a>
                 </div>
             </div>
