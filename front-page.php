@@ -133,7 +133,7 @@
                 <p class="text-base text-green uppercase tracking-wider leading-none">Nos produits</p>
                 <h2 class="text-3xl leading-none">Vos coups de coeur</h2>
             </div>
-            <div class="produits-list__list bg-white md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-7 pt-6">
+            <div class="produits-list__list bg-white md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-7 pt-16">
                 
                 <?php
                     while ( $query->have_posts() ) :
