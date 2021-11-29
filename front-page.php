@@ -147,7 +147,7 @@
             </div>
 
             <div class="text-center">
-                <a href="<?php echo wc_get_page_permalink( 'shop' ); ?>" class="btn-primary mt-10 lg:mt-28">Voir la boutique</a>
+                <a href="<?php echo wc_get_page_permalink( 'shop' ); ?>" class="btn-primary mt-4 lg:mt-0">Voir la boutique</a>
             </div>
         </div>
     </section>
