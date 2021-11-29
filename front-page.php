@@ -73,6 +73,8 @@
                     $link = get_term_link($categorie->slug, 'product_cat');
                     $image = get_field('image_thumbnail', 'product_cat_' . $categorie->term_id);
                     $image_url = $image['sizes']['medium_large'];
+
+                    if($categorie->slug != 'non-classe'):
                 ?>
 
                 <a class="products-cat__item swiper-slide" href="<?php echo $link; ?>">
@@ -85,7 +87,10 @@
                     </div>
                 </a>
 
-                <?php endforeach; ?>
+                <?php 
+                    endif;
+                endforeach; 
+                ?>
             </div>
             
             <!-- Scrollbar -->

@@ -1,46 +1,48 @@
-.cursor{
-    @apply z-40;
-    display: none;
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid $greendark;
-    top: -30px;
-    left: -30px;
-    transition: 0.2s ease-out;
-    pointer-events: none;
+.cursor {
+	@apply z-40;
+	display: none;
+	position: fixed;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	// background: rgba(255,255,255,0.1);
+	background: $greendark;
+	// border: 1px solid $greendark;
+	top: -5px;
+	left: -5px;
+	transition: 0.2s ease-out;
+	pointer-events: none;
+	opacity: 0.15;
 
-    @media screen and (min-width: $xl){
-        display: block;
-    }
+	@media screen and (min-width: $xl) {
+		display: block;
+	}
 
-    &::before{
-        content: "";
-        position: absolute;
-        width: 52px;
-        height: 52px;
-        border: 1px solid $greendark;
-        border-radius: 100%;
-        z-index: 10;
-        top: 3px;
-        left: 3px;
-        opacity: 0.35;
-        transition: opacity 0s;
-    }
+	// &::before{
+	//     content: "";
+	//     position: absolute;
+	//     width: 52px;
+	//     height: 52px;
+	//     border: 1px solid $greendark;
+	//     border-radius: 100%;
+	//     z-index: 10;
+	//     top: 3px;
+	//     left: 3px;
+	//     opacity: 0.35;
+	//     transition: opacity 0s;
+	// }
 
-    &.hover{
-        background:$greendark;
-        border-color: $light;
-        opacity: 0.15;
-        width: 100px;
-        height: 100px;
-        top: -50px;
-        left: -50px;
+	&.hover {
+		// background:$greendark;
+		// border-color: $light;
+		// opacity: 0.15;
+		width: 100px;
+		height: 100px;
+		top: -50px;
+		left: -50px;
 
-        &::before{
-            opacity: 0;
-        }
-    }
+		// &::before{
+		//     opacity: 0;
+		// }
+	}
 }

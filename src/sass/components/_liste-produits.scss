@@ -1,93 +1,92 @@
-.produits-list{
-    &__item{
-        @apply relative flex justify-start items-center flex-col py-6;  
-    }
+.produits-list {
+	&__item {
+		@apply relative flex justify-start items-center flex-col pt-6 pb-16;
+	}
 
-    &__item:nth-child(2n){
-        @media screen and (min-width: $md){
-            margin-top: 8vh;
-        }
-        @media screen and (min-width: $lg){
-            margin-top: 4vh;
-        }
-    }
-    &__item:nth-child(4n + 2){
-        @media screen and (min-width: $lg){
-            margin-top: 6vh;
-        }
-    }
-    &__item:nth-child(4n + 1){
-        @media screen and (min-width: $lg){
-            margin-top: 2vh;
-        }
-    }
+	// &__item:nth-child(2n) {
+	// 	@media screen and (min-width: $md) {
+	// 		margin-top: 8vh;
+	// 	}
+	// 	@media screen and (min-width: $lg) {
+	// 		margin-top: 4vh;
+	// 	}
+	// }
+	// &__item:nth-child(4n + 2){
+	//     @media screen and (min-width: $lg){
+	//         margin-top: 6vh;
+	//     }
+	// }
+	// &__item:nth-child(4n + 1){
+	//     @media screen and (min-width: $lg){
+	//         margin-top: 2vh;
+	//     }
+	// }
 
-    &__image-container{
-        @apply relative overflow-hidden w-full block;
-        padding-bottom: 100%;
+	&__image-container {
+		@apply relative overflow-hidden w-full block;
+		padding-bottom: 100%;
 
-        @media screen and (min-width: $lg){
-            padding-bottom: 125%;
-        }
+		@media screen and (min-width: $lg) {
+			padding-bottom: 125%;
+		}
 
-        img{
-            transition: 0.5s $ease !important;
-            @apply absolute h-full w-full object-cover;
-        }
+		img {
+			transition: 0.5s $ease !important;
+			@apply absolute h-full w-full object-cover;
+		}
 
-        &:hover{
-            img{
-                transform:scale(1.05);
-            }
-        }
-    }
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+	}
 
-    &__category{
-        @apply inline-block uppercase text-sm tracking-wider relative px-2 text-green hover:text-greendark;
-        margin-top:-20px;
+	&__category {
+		@apply inline-block uppercase text-xs tracking-wider relative px-2 text-green hover:text-greendark;
+		margin-top: -20px;
 
-        @media screen and (min-width: $lg){
-            margin-top:-24px;
-        }
-    }
+		@media screen and (min-width: $lg) {
+			margin-top: -22px;
+		}
+	}
 
-    &__text-container{
-        @apply text-center mt-9;
+	&__text-container {
+		@apply text-center mt-9;
 
-        @media screen and (min-width: $lg){
-            @apply mt-12;
-        }
-    }
+		@media screen and (min-width: $lg) {
+			@apply mt-8;
+		}
+	}
 
-    &__list{
-        &.bg-white{
-            .produits-list__category{
-                background: white;
-            }
-        }
-        &.bg-light{
-            .produits-list__category{
-                background: $light;
-            }
-        }
-    }
+	&__list {
+		&.bg-white {
+			.produits-list__category {
+				background: white;
+			}
+		}
+		&.bg-light {
+			.produits-list__category {
+				background: $light;
+			}
+		}
+	}
 
-
-    //Out of stock
-    &__item-out{
-        .produits-list__image-container{
-            &::after{
-                content: "";
-                background: rgba(255,255,255,0.6);
-                z-index: 1;
-                @apply absolute inset-0;
-            }
-            &::before{
-                content: "Indisponible pour le moment";
-                top: 50%;
-                z-index: 2;
-                @apply absolute text-center inset-x-0 text-dark font-bold uppercase text-sm opacity-75;
-            }
-        }
-    }
+	//Out of stock
+	&__item-out {
+		.produits-list__image-container {
+			&::after {
+				content: "";
+				background: rgba(255, 255, 255, 0.6);
+				z-index: 1;
+				@apply absolute inset-0;
+			}
+			&::before {
+				content: "Indisponible pour le moment";
+				top: 50%;
+				z-index: 2;
+				@apply absolute text-center inset-x-0 text-dark font-bold uppercase text-sm opacity-75;
+			}
+		}
+	}
 }

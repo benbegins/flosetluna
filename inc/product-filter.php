@@ -14,10 +14,16 @@ function filter_products(){
             'post_type'              => array( 'product' ),
             'posts_per_page'         => -1,
             'tax_query'      		=> array(
+                'relation'          => 'OR',
                 array(
                     'taxonomy' => 'product_cat',
                     'field'    => 'slug',
                     'terms'    => $category,
+                ),
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'slug',
+                    'terms'    => array('non-classe'),
                 ),
             ),
             'meta_key'              => '_stock',

@@ -55,13 +55,18 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
                 $name = $categorie->name;
                 $slug = $categorie->slug;
                 $link = get_term_link($categorie->slug, 'product_cat');
+
+                if($slug != 'non-classe'):
             ?>
             
             <li class="py-2">
                 <button class="archive-product__cat__link hover:text-green uppercase focus:outline-none <?php if(get_queried_object()->term_id == $categorie->term_id){echo 'active';} ?>" data-category="<?php echo $slug; ?>"><?php echo $name; ?></button>
             </li>
 
-            <?php endforeach; ?>
+            <?php 
+                endif;
+            endforeach; 
+            ?>
         </ul>
         
         <!-- Liste catégories Mobile -->
@@ -97,10 +102,16 @@ $post_id = get_option( 'woocommerce_shop_page_id' );
         $args = array(
             'post_type'              => array( 'product' ),
             'tax_query'      		=> array(
+                'relation'          => 'OR',
                 array(
                     'taxonomy' => 'product_cat',
                     'field'    => 'id',
                     'terms'    => $cateID,
+                ),
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field'    => 'slug',
+                    'terms'    => array('non-classe'),
                 ),
             ),
             'posts_per_page'         => -1,

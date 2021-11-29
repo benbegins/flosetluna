@@ -37,7 +37,7 @@ get_header(); ?>
 				<!-- Titre -->
 				<div class="produit-single__title-container lg:pl-10">
 					<p class="uppercase tracking-wider fade-in" data-delay="0"><?php the_field('proprietes'); ?></p>
-					<h1 class="text-4xl leading-none fade-in" data-delay="0.15"><?php the_title(); ?></h1>
+					<h1 class="text-3xl leading-none fade-in" data-delay="0.15"><?php the_title(); ?></h1>
 				</div>
 
 				<!-- Prix / Ajouter au panier / Composition / Description -->
@@ -84,7 +84,7 @@ get_header(); ?>
 						<p class="text-base mb-12 pl-6 border-l italic"><?php echo $contre_indication; ?></p>
 						<?php endif; ?>
 
-						<div class="produit-single__content__description text-lg"><?php the_field('description'); ?></div>
+						<div class="produit-single__content__description text-base"><?php the_field('description'); ?></div>
 						
 						<?php 
 							$feuilleteur = get_field('feuilleteur'); 
@@ -111,7 +111,7 @@ get_header(); ?>
 			?>
 			<div>
 				<h2 class="text-2xl mb-6 lg:mb-12">Propriétés</h2>
-				<div class="text-lg mb-12 lg:mb-24 pl-12 lg:pl-24"><?php echo $proprietes_detaillees; ?></div>	
+				<div class="text-base mb-12 lg:mb-24 pl-12 lg:pl-24"><?php echo $proprietes_detaillees; ?></div>	
 			</div>
 			<?php endif; ?>
 			
@@ -122,7 +122,7 @@ get_header(); ?>
 			?>
 			<div>
 				<h2 class="text-2xl mb-6 lg:mb-12">Conseils d'utilisation</h2>
-				<div class="text-lg mb-12 lg:mb-24 pl-12 lg:pl-24"><?php echo $conseils_dutilisation; ?></div>
+				<div class="text-base mb-12 lg:mb-24 pl-12 lg:pl-24"><?php echo $conseils_dutilisation; ?></div>
 			</div>
 			<?php endif; ?>
 			
@@ -133,7 +133,7 @@ get_header(); ?>
 			?>
 			<div>
 				<h2 class="text-2xl mb-6 lg:mb-12">Détails</h2>
-				<div class="text-lg pl-12 lg:pl-24"><?php echo $details; ?></div>	
+				<div class="text-base pl-12 lg:pl-24"><?php echo $details; ?></div>	
 			</div>
 			<?php endif; ?>
 						
