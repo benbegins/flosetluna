@@ -1,125 +1,132 @@
-.site-header{
-    min-height: 75px;
-    transition: background 0.5s;
+.site-header {
+	min-height: 75px;
+	background: $light;
+	transition: background 0.5s;
 
-    &.background{
-        background: white;
-    }
+	&.background {
+		background: $light;
+	}
 
-    &__logo{
-        @apply pl-4 py-3;
+	&__logo {
+		@apply pl-4 py-3;
 
-        @media screen and (min-width: $md){
-            @apply pl-6;
-        }
+		@media screen and (min-width: $md) {
+			@apply pl-6;
+		}
 
-        @media screen and (min-width: $xl){
-            @apply pl-8;
-        }
+		@media screen and (min-width: $xl) {
+			@apply pl-8;
+		}
 
-        svg{
-            width: 170px;
-            max-width: 50vw;
-            @media screen and (min-width: $md){
-                width: 200px;
-            }
-            @media screen and (min-width: $lg){
-                width: 220px;
-            }
-        }
-    }
+		svg {
+			width: 170px;
+			max-width: 50vw;
+			@media screen and (min-width: $md) {
+				width: 200px;
+			}
+			@media screen and (min-width: $lg) {
+				width: 220px;
+			}
+		}
+	}
 
-    &__burger{
-        .line{
-            width: 18px;
-            height: 2px;
-            background: $light;
-            margin: 2px 0;
-            transform-origin: center center;
-            transition: transform 0.3s ease;
-        }
-        &.active{
-            .line-1{
-                transform: rotate(45deg) translate(4px, 4px);
-            }
-            .line-3{
-                transform: rotate(-45deg) translate(5px, -4px);
-            }
-            .line-2{
-                transform: scaleX(0);
-            }
-        }
-    }
+	&__burger {
+		.line {
+			width: 18px;
+			height: 2px;
+			background: $light;
+			margin: 2px 0;
+			transform-origin: center center;
+			transition: transform 0.3s ease;
+		}
+		&.active {
+			.line-1 {
+				transform: rotate(45deg) translate(4px, 4px);
+			}
+			.line-3 {
+				transform: rotate(-45deg) translate(5px, -4px);
+			}
+			.line-2 {
+				transform: scaleX(0);
+			}
+		}
+	}
 
-    &__menu-mobile{
-        transition: transform 0.75s cubic-bezier(0.3,0,0,1);
-        transform: translateY(-100%);
-        &.active{
-            transform: translateY(0);
-        }
+	&__menu-mobile {
+		transition: transform 0.75s cubic-bezier(0.3, 0, 0, 1);
+		transform: translateY(-100%);
+		&.active {
+			transform: translateY(0);
+		}
 
-        .menu-mobile__list{
-            a{
-                display: block;
-                padding: 3vh 0;
-            }
-        }    
-    }
+		.menu-mobile__list {
+			a {
+				display: block;
+				padding: 3vh 0;
+			}
+		}
+	}
 
-    &__menu{
-        .menu-principal{
-            a{
-                @apply block px-6 py-2 hover:text-green;
-            }
-        }
-    }
+	&__menu {
+		.menu-principal {
+			a {
+				@apply block px-6 py-2 hover:text-green;
+			}
+		}
+	}
 
-    svg path, svg ellipse {
-        transition: 0.2s;
-    }
+	svg path,
+	svg ellipse {
+		transition: 0.2s;
+	}
 
-    a:hover{
-        path, ellipse{
-            fill: $green;
-        }
-    }
+	a:hover {
+		path,
+		ellipse {
+			fill: $green;
+		}
+	}
 
-    // Search bar
-    &__search{
-        position: relative;
+	// Search bar
+	&__search {
+		position: relative;
 
-        input[type="text"]{
-            border: 1px solid rgba(56,82,79,0.25);
-            background: transparent;
-            @apply rounded-lg text-xs px-4 py-3;
-            width: 250px;
-        }
+		input[type="text"] {
+			border: 1px solid rgba(56, 82, 79, 0.25);
+			background: transparent;
+			@apply rounded-lg text-xs px-4 py-3;
+			width: 250px;
 
-        input[type="submit"]{
-            text-indent: -9999px;
-            height: 20px;
-            width: 20px;
-            background: url('./dist/img/icon-search-green.svg') center center no-repeat;
-            background-size: 20px 20px;
-            position: absolute;
-            top: calc(50% - 10px);
-            right: 20px;
-            cursor: pointer;
-        }
+			&:focus {
+				outline: 1px solid $greendark;
+			}
+		}
 
-        // Mobile
-        &.search-mobile{
-            margin-top: 3vh;
-            
-            input[type="text"]{
-                border: 1px solid rgba(245,241,237,0.25);
-            }
-            input[type="submit"]{
-                background: url('./dist/img/icon-search-white.svg') center center no-repeat;
-                background-size: 20px 20px;
-            }
-        }
-    }
-    
-    
+		input[type="submit"] {
+			text-indent: -9999px;
+			height: 20px;
+			width: 20px;
+			background: url("./dist/img/icon-search-green.svg") center center
+				no-repeat;
+			background-size: 20px 20px;
+			position: absolute;
+			top: calc(50% - 10px);
+			right: 20px;
+			cursor: pointer;
+		}
+
+		// Mobile
+		&.search-mobile {
+			margin-top: 3vh;
+
+			input[type="text"] {
+				border: 1px solid rgba(245, 241, 237, 0.25);
+			}
+			input[type="submit"] {
+				background: url("./dist/img/icon-search-white.svg") center
+					center no-repeat;
+				background-size: 20px 20px;
+			}
+		}
+	}
 }
