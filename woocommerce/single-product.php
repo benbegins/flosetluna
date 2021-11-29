@@ -153,7 +153,7 @@ get_header(); ?>
                 <p class="text-base text-green uppercase tracking-wider leading-none">Nos produits</p>
                 <h2 class="text-3xl leading-none">À découvrir aussi</h2>
             </div>
-            <div class="produits-list__list bg-white md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-7 pt-6 lg:pt-12">
+            <div class="produits-list__list bg-white md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-7 pt-6 lg:pt-16">
 				<?php
 					// On affiche en priorité les produits de la même catégorie
 					$category = get_the_terms($post->ID, 'product_cat');
@@ -213,7 +213,7 @@ get_header(); ?>
 			</div>
 			
             <div class="text-center">
-                <a href="<?php echo get_site_url(); ?>/boutique" class="btn-primary mt-10 lg:mt-28">Voir tous nos produits</a>
+                <a href="<?php echo get_site_url(); ?>/boutique" class="btn-primary mt-10 lg:mt-0">Voir tous nos produits</a>
             </div>
         </div>
     </section>
