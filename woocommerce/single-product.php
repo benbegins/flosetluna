@@ -90,7 +90,7 @@ get_header(); ?>
 							$feuilleteur = get_field('feuilleteur'); 
 							if($feuilleteur):
 						?>
-						<a href="<?php the_field('feuilleteur'); ?>" class="feuilleteur__open btn-secondary mt-10 no-transition">Feuilleter un extrait</a>
+						<a href="<?php the_field('feuilleteur'); ?>" class="feuilleteur__open btn-secondary mt-10" target="_blank">Feuilleter un extrait</a>
 						<?php endif; ?>
 					</div>
 				</div>
