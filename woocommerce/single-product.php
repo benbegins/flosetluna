@@ -101,12 +101,19 @@ get_header(); ?>
 
 
 	<!-- Description détaillée -->
+	<?php 
+	$proprietes_detaillees = get_field('proprietes_detaillees');
+	$conseils_dutilisation = get_field('conseils_dutilisation');
+	$details = get_field('details');
+	
+	if($proprietes_detaillees || $conseils_dutilisation || $details):
+
+	?>
 	<section class="bg-light">
 		<div class="container section-pad lg:w-3/5 xxl:w-1/2 border-t border-greendark border-opacity-25">
 		
 			<!-- Propriétés détaillés -->
 			<?php 
-			$proprietes_detaillees = get_field('proprietes_detaillees');
 			if($proprietes_detaillees):
 			?>
 			<div>
@@ -117,7 +124,6 @@ get_header(); ?>
 			
 			<!-- Conseils d'utilisation -->
 			<?php 
-			$conseils_dutilisation = get_field('conseils_dutilisation');
 			if($conseils_dutilisation):
 			?>
 			<div>
@@ -128,7 +134,6 @@ get_header(); ?>
 			
 			<!-- Détails -->
 			<?php 
-			$details = get_field('details');
 			if($details):
 			?>
 			<div>
@@ -139,6 +144,7 @@ get_header(); ?>
 						
 		</div>
 	</section>
+	<?php endif; ?>
 
 <?php 
 	endwhile;
