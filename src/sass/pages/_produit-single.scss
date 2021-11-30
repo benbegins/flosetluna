@@ -46,11 +46,6 @@
 			border-radius: 10px;
 		}
 
-		ul {
-			list-style: disc;
-			list-style-position: inside;
-		}
-
 		.quantity {
 			label {
 				display: none;
@@ -69,6 +64,19 @@
 				@apply mb-10;
 				&:last-child {
 					margin-bottom: 0;
+				}
+			}
+
+			ul {
+				list-style: disc;
+				list-style-position: inside;
+			}
+
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					color: $green;
 				}
 			}
 		}
