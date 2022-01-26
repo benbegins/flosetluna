@@ -75,3 +75,6 @@ add_filter( 'woocommerce_single_product_image_thumbnail_html', 'e12_remove_produ
 
 // Product filter
 require get_template_directory() . '/inc/product-filter.php';
+
+//Disable plugin auto-update email notification
+add_filter('auto_plugin_update_send_email', '__return_false');
