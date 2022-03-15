@@ -1,7 +1,7 @@
    
     <!-- Réassurance -->
     <div class="footer_reassurance bg-light section-pad">
-        <div class="container text-center leading-normal grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-8">
+        <div class="container text-center leading-normal grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12 lg:grid-cols-5 lg:gap-8">
             <div>
                 <div class="h-28 flex items-center">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-madeinfrance.svg" alt="made in France" class="mx-auto">
@@ -29,6 +29,13 @@
                 </div>
                 <h5 class="text-lg font-bold">Frais de port offerts</h5>
                 <p>En point relais à partir de 50€ <br>de commande.</p>
+            </div>
+            <div>
+                <div class="h-28 flex items-center">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-collect.svg" alt="Click and collect" class="mx-auto">
+                </div>
+                <h5 class="text-lg font-bold">Click & Collect Nantes</h5>
+                <p>Wearth Lab <br>13, rue du château à Nantes.</p>
             </div>
         </div>
     </div>
