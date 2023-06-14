@@ -7,6 +7,17 @@
     <?php wp_head(); ?>
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X0WLY5R4KG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X0WLY5R4KG');
+</script>
+
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
